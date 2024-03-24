@@ -3,15 +3,15 @@ import './App.css';
 import Navbar from './componetns/Navbar';
 import TextForm from './componetns/TextForm';
 import Alert from './componetns/Alert';
-import ReactDOM from "react-dom";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
-import About from './componetns/About';
-import NoMatch from './componetns/NoMatch';
+// import ReactDOM from "react-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link
+// } from "react-router-dom";
+// import About from './componetns/About';
+// import NoMatch from './componetns/NoMatch';
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -35,18 +35,17 @@ function App() {
   }
   return (
     <>
-    <Router>
+    {/* <Router> */}
       <Navbar pageTitle="TextUtils" aboutTitle="About" theme={theme} toggleTheme={toggleTheme} showAlert={showAlert} />
       <Alert alert={alert} />
       {/* <About/> */}
       <div className="container my-3">
-        <Routes>
-          <Route exact path="/" element={<TextForm formHeading="Enter Text Below:" theme={theme} showAlert={showAlert} />}/>
-          <Route path="/about" element={<About theme={theme} />}/>
-          <Route element={<NoMatch/>}/>
-        </Routes>
+        {/* <Routes> */}
+        <TextForm formHeading="Enter Text Below:" theme={theme} showAlert={showAlert} />
+        {/* <About theme={theme} /> */}
+        {/* </Routes> */}
       </div>
-    </Router>
+    {/* </Router> */}
     </>
   );
 }
