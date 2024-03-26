@@ -31,8 +31,8 @@ export default function TextForm(prop) {
             </div >
             <div className="container my-3" >
                 <h2 >Text Summary</h2>
-                <p>{enteredText.trim().split(" ").filter((x)=>x!=="").length} words and {enteredText.trim().length} characters.</p>
-                <p>{enteredText.trim().split(" ").filter((x)=>x!=="").length * 0.008} mins read.</p>
+                <p>{enteredText.trim().split(/\s+/).filter((x)=>x!=="").length} words and {enteredText.trim().length} characters.</p>
+                <p>{enteredText.trim().split(/\s+/).filter((x)=>x!=="").length * 0.008} mins read.</p>
             </div>
             <div className="container my-3">
                 <h2>Preview</h2>
